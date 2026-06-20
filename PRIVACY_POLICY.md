@@ -1,3 +1,8 @@
+---
+layout: default
+title: Privacy Policy
+---
+
 # Scrollingo Privacy Policy
 
 Last updated: May 7, 2026
