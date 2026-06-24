@@ -37,15 +37,15 @@ Scrollingo uses Firebase Authentication with Google Sign-In to let users create 
 
 Scrollingo requests microphone permission because some learning features rely on spoken input. Microphone access is used only to support speech and pronunciation features inside the app. Users can deny this permission, but some speech-based features may not work correctly.
 
-## 5. App Blocking Permissions
+## 5. App Blocking Permissions (Usage Access)
 
-On Android, Scrollingo may request permissions such as overlay access, app usage access, and battery optimization exemption in order to:
+On Android, Scrollingo may request permissions such as overlay access (`SYSTEM_ALERT_WINDOW`), App Usage Access (`PACKAGE_USAGE_STATS`), and battery optimization exemption in order to:
 
-- detect when a blocked app is opened,
+- detect when a blocked app is opened in the foreground,
 - show a blocking screen or interruption layer,
 - and keep focus-related features working reliably.
 
-These permissions are used only for the app's blocking and focus functionality, and do not involve reading the content of other apps.
+**Important Data Disclosure for Usage Access:** The data accessed through the App Usage Access (Usage Stats API) is processed entirely locally on your device. We use it solely to determine which app is currently open so we can display the educational overlay when appropriate. We do not read the content of other apps, nor do we transmit, store off-device, or share your app usage history with any third parties.
 
 ## 6. Data Storage
 
